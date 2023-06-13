@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 
 
 
-    
+    var closure: ()?
 
     @IBOutlet weak var sendBtn: UIButton!
 
@@ -61,24 +61,31 @@ class ViewController: UIViewController {
             print(#fileID, #function, #line, "- <# 주석 #>")
         
         
-      
+        sender.setImage(UIImage(), for: .normal)
+       
+       
         sender.setTitle("로딩중", for: .normal)
+
+         
+        
+       
+        
+        
         sender.setTitleColor(.black, for: .normal)
         sender.titleLabel?.font = .systemFont(ofSize: 15)
         
         
         callPostMethod(chatTextView.text) {
-          
+
             DispatchQueue.main.async {
                 sender.setTitle("", for: .normal)
-               
-                self.sendBtn.setImage(UIImage(named: "paperplane"),
-                                      
-                                       for: .normal)
+
+                sender.setImage(UIImage(systemName: "paperplane.fill"), for: .normal)
+                
                 self.myTableView.reloadData()
                 self.chatTextView.text = ""
             }
-           
+
         }
         
         
