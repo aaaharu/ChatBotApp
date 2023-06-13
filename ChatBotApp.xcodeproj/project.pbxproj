@@ -13,6 +13,10 @@
 		D32C04B12A319B71003D45AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32C04AF2A319B71003D45AB /* Main.storyboard */; };
 		D32C04B32A319B72003D45AB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D32C04B22A319B72003D45AB /* Assets.xcassets */; };
 		D32C04B62A319B72003D45AB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32C04B42A319B72003D45AB /* LaunchScreen.storyboard */; };
+		D35C6E8D2A33473E00A802DA /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = D35C6E8C2A33473E00A802DA /* MessageKit */; };
+		D35C6E912A33573300A802DA /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35C6E902A33573300A802DA /* ChatCell.swift */; };
+		D36484F52A382F1B00CF2AEF /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36484F42A382F1B00CF2AEF /* Model.swift */; };
+		D36484F72A383FFC00CF2AEF /* MyChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36484F62A383FFC00CF2AEF /* MyChatCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		D32C04B22A319B72003D45AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D32C04B52A319B72003D45AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D32C04B72A319B72003D45AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D35C6E902A33573300A802DA /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCell.swift; sourceTree = "<group>"; };
+		D36484F42A382F1B00CF2AEF /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		D36484F62A383FFC00CF2AEF /* MyChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyChatCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35C6E8D2A33473E00A802DA /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,7 +66,10 @@
 			children = (
 				D32C04A92A319B71003D45AB /* AppDelegate.swift */,
 				D32C04AB2A319B71003D45AB /* SceneDelegate.swift */,
+				D36484F42A382F1B00CF2AEF /* Model.swift */,
 				D32C04AD2A319B71003D45AB /* ViewController.swift */,
+				D35C6E902A33573300A802DA /* ChatCell.swift */,
+				D36484F62A383FFC00CF2AEF /* MyChatCell.swift */,
 				D32C04AF2A319B71003D45AB /* Main.storyboard */,
 				D32C04B22A319B72003D45AB /* Assets.xcassets */,
 				D32C04B42A319B72003D45AB /* LaunchScreen.storyboard */,
@@ -83,6 +94,9 @@
 			dependencies = (
 			);
 			name = ChatBotApp;
+			packageProductDependencies = (
+				D35C6E8C2A33473E00A802DA /* MessageKit */,
+			);
 			productName = ChatBotApp;
 			productReference = D32C04A62A319B71003D45AB /* ChatBotApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,9 @@
 				Base,
 			);
 			mainGroup = D32C049D2A319B71003D45AB;
+			packageReferences = (
+				D35C6E8B2A33473E00A802DA /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
 			productRefGroup = D32C04A72A319B71003D45AB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36484F52A382F1B00CF2AEF /* Model.swift in Sources */,
 				D32C04AE2A319B71003D45AB /* ViewController.swift in Sources */,
+				D35C6E912A33573300A802DA /* ChatCell.swift in Sources */,
 				D32C04AA2A319B71003D45AB /* AppDelegate.swift in Sources */,
 				D32C04AC2A319B71003D45AB /* SceneDelegate.swift in Sources */,
+				D36484F72A383FFC00CF2AEF /* MyChatCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +376,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D35C6E8B2A33473E00A802DA /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D35C6E8C2A33473E00A802DA /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D35C6E8B2A33473E00A802DA /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = D32C049E2A319B71003D45AB /* Project object */;
 }

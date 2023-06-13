@@ -9,4 +9,11 @@ import UIKit
 
 class ChatBotCell: UICollectionViewCell {
     
+    @IBOutlet weak var myTextView: UITextView!
+    
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
+    
+    
 }
